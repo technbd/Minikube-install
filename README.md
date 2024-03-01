@@ -267,6 +267,11 @@ webapp-wear-svc   NodePort    10.111.79.163   <none>        8080:30080/TCP   105
 
 
 ```
+minikube ip -p my-cluster
+```
+
+
+```
 minikube service list -p my-cluster
 
 |-------------|-----------------|--------------|---------------------------|
