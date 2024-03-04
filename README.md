@@ -289,6 +289,18 @@ curl http://192.168.49.2:30080
 ```
 
 
+```
+kubectl run nginx-pod --image nginx
+kubectl port-forward pod/nginx-pod 8080:80
+
+kubectl expose pod nginx-pod --name=nginx-pod-svc --port=8080 --target-port=80
+kubectl port-forward service/nginx-pod-svc 8080:8080
+
+kubectl create deployment deploy-nginx --image nginx
+kubectl port-forward deployment/deploy-nginx 8081:80
+```
+
+
 ### Delete Cluster: 
 
 To delete a Minikube cluster, you can use the minikube delete command. This command will remove the Minikube cluster and associated resources from your local machine. Here's how to do it:
